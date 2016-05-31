@@ -96,6 +96,11 @@ module Api
       render_message(exception.message, :status => :service_unavailable)
     end
 
+    def service_unavailable(exception = nil)
+      logger.debug "service unavailable: #{exception}" if exception
+      render_message(exception.message, :status => :service_unavailable)
+    end
+
     def process_resource_error(options = { })
       resource = options[:resource] || get_resource
 
