@@ -1,0 +1,3 @@
+export default {
+    RECEIVED_STATISTICS: 'RECEIVED_STATISTICS'
+};

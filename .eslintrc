@@ -1,6 +1,7 @@
 {
   "ecmaFeatures": {
     "globalReturn": true,
+    "jsx": true,
     "modules": true
   },
 
@@ -16,11 +17,20 @@
     "navigator": false,
     "unescape": false,
     "window": false,
+    "describe": true,
+    "before": true,
+    "it": true,
+    "expect": true,
+    "sinon": true,
     "$": true,
     "_": true
   },
 
   "parser": "babel-eslint",
+
+  "plugins": [
+    "react"
+  ],
 
   "rules": {
     "block-scoped-var": "error",
@@ -120,7 +130,7 @@
     "no-regex-spaces": "error",
     "no-reserved-keys": "off",
     "no-restricted-modules": "off",
-    "no-return-assign": "error",
+    "no-return-assign": "warn",
     "no-script-url": "off",
     "no-self-compare": "error",
     "no-sequences": "error",
@@ -131,7 +141,7 @@
     "no-sync": "off",
     "no-ternary": "off",
     "no-throw-literal": "error",
-    "no-trailing-spaces": "error",
+    "no-trailing-spaces": "warn",
     "no-undef": "error",
     "no-undef-init": "error",
     "no-undefined": "off",
@@ -152,7 +162,23 @@
     "quote-props": "off",
     "quotes": ["error", "single", "avoid-escape"],
     "radix": "error",
-    "jsx-quotes": ["error", "prefer-single"],
+    "jsx-quotes": ["warn", "prefer-single"],
+    "react/display-name": "off",
+    "react/jsx-boolean-value": "warn",
+    "react/jsx-no-undef": "error",
+    "react/jsx-sort-prop-types": "off",
+    "react/jsx-sort-props": "off",
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "react/no-did-mount-set-state": "error",
+    "react/no-did-update-set-state": "error",
+    "react/no-multi-comp": "error",
+    "react/no-unknown-property": "error",
+    "react/prop-types": "warn",
+    "react/react-in-jsx-scope": "error",
+    "react/self-closing-comp": "error",
+    "react/sort-comp": "off",
+    "react/wrap-multilines": "error",
     "semi": ["error", "always"],
     "semi-spacing": "off",
     "sort-vars": "off",

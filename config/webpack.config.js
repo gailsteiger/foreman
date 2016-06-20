@@ -28,21 +28,23 @@ var config = {
   },
 
   resolve: {
-    extensions: ['', '.js'],
+    extensions: ['', '.js', '.jsx'],
     root: path.join(__dirname, '..', 'webpack')
   },
 
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.jsx*$/,
         exclude: /node_modules/,
-        loader: "babel-loader",
-        query: {
-          presets: ['es2015']
-        }
+        loader: "babel-loader"
+      },
+      {
+        test: /(\.jsx|\.js)$/,
+        exclude: /node_modules/,
+        loader: "eslint-loader",
       }
-    ],
+    ]
   },
 
   plugins: [
@@ -57,7 +59,7 @@ var config = {
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',
-      jQuery: 'jquery',
+      jQuery: 'jquery'
     })
   ]
 };

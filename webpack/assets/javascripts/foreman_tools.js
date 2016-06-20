@@ -8,6 +8,7 @@ export function hideSpinner() {
 
 export function iconText(name, innerText, iconClass) {
   let icon = '<span class="' + iconClass + ' ' + iconClass + '-' + name + '"/>';
+
   if (innerText !== '') {
     icon += '<strong>' + innerText + '</strong>';
   }

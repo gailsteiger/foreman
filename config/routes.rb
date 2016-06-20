@@ -421,6 +421,15 @@ Foreman::Application.routes.draw do
   get 'dashboard', :to => 'dashboard#index', :as => "dashboard"
   get 'dashboard/auto_complete_search', :to => 'hosts#auto_complete_search', :as => "auto_complete_search_dashboards"
   get 'statistics', :to => 'statistics#index', :as => "statistics"
+  get 'statistics/operatingsystem_dist', :to => 'statistics#os_dist'
+  get 'statistics/architecture_dist', :to => 'statistics#arch_dist'
+  get 'statistics/environment_dist', :to => 'statistics#env_dist'
+  get 'statistics/puppetclass_dist', :to => 'statistics#puppetclass_dist'
+  get 'statistics/memory_usage', :to => 'statistics#memory_usage'
+  get 'statistics/swap_usage', :to => 'statistics#swap_usage'
+  get 'statistics/processorcount', :to => 'statistics#cpu_count'
+  get 'statistics/hardware', :to => 'statistics#model_count'
+
   get 'status', :to => 'home#status', :as => "status"
 
   # get only for alterator unattended scripts
