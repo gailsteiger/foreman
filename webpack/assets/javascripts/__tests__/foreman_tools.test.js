@@ -1,5 +1,7 @@
 'use strict';
 
+jest.unmock('../foreman_tools');
+
 describe('iconText', () => {
   const tools = require('../foreman_tools');
 

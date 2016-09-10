@@ -39,6 +39,12 @@
   },
   "scripts": {
     "lint": "./node_modules/.bin/eslint -c .eslintrc webpack/assets/**/*.js",
-    "jest": "jest"
+    "test": "jest"
+  },
+  "jest": {
+    "automock": true,
+    "unmockedModulePathPatterns": [
+      "jquery"
+    ]
   }
 }
